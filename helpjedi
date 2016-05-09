@@ -66,13 +66,19 @@ int tenta (int l, int c)
                 if(ABS(dl)==ABS(dc))
                     continue;
                 else
+                {
                     printf("Tetano\n"/*":(%d,%d)\n", l+dl, c+dc*/);
+                    m[l][c]='x';
                     imprime();
                     t = tenta(l+dl, c+dc);
-                    
+                    if(t==1)
+                        return t;
+                    else
+                        m[l][c]=' ';
+                }
             }
         }
     }
     
-    return ;
+    return t;
 }
