@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10
+#define IX 1
+#define IY 1
+#define GX 8
+#define GY 5
+#define ABS(x)((x)?1:0)
+
+char m[MAX][MAX+1]=
+{
+    "###########",
+    "# #       #",
+    "# # # ### #",
+    "#   # #   #",
+    "# ##### # #",
+    "# #   # # #",
+    "#   ### ###",
+    "### #     #",
+    "#   # ### #", /* o fim do seguidor */
+    "###########",
+};
+
+void imprime (void);
+
+int tenta (int l, int c);
+
+int main (void)
+{
+    tenta(IY, IX);
+    return 0;
+}
+
+void imprime (void)
+{
+    int a, b;
+
+    for (a = 0;a < MAX; a++)
+    {
+        for (b = 0;b <= MAX; b++)
+            printf("%c", m[a][b]);
+        printf("\n");
+    }
+    printf("\n");
+    return;
+}
+
+int tenta (int l, int c)
+{
+    int dl, dc, t;
+    if((l==GX) && (c==GY))
+    {
+        m[l][c]='!';
+        printf("Achou a saida\n");
+        imprime();
+        t = 1; /*senao receber o 1 ele vai voltar para origem, e nao e' o que se deseja*/
+        return t;
+    }
+    
+    if((m[l][c]!= '#' && m[l][c]!= 'x')) /*se o espaco estiver livre...*/
+    {
+        for(dl = 1; dl >= -1; dl--)
+        {
+            for(dc = 1; dc >= -1; dc--)
+            {
+                if(ABS(dl)==ABS(dc))
+                    continue;
+                else
+                    printf("Tentano\n"/*":(%d,%d)\n", l+dl, c+dc*/);
+            }
+        }
+    }
+    
+    return ;
+}
