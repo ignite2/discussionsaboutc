@@ -1,0 +1,33 @@
+Trabalho de Recursividade :torre de Hanói
+Primeiramente ilustraremos o código.
+Vou colar ele aqui
+Aviso: Atenção vou ter de atualizar o numero das linha no trabalho, as linha que estão ai foram as que eu coloquei no meu caderno
+Vamos debugar o código para 3 pinos.
+Legenda:
+L=linh
+a=pino de partida
+b=pino  auxiliar 
+c=pino de destino
+
+Na main, Primeiro na L=  ele pergunta ao usuário quantos discos ele quer .
+ L= 4 ele chama a função  torre e abre uma 2 instancia, nessa segunda instancia d=3  ,front=a, tot=c,auxt=b.
+O valor de d na atende a condição do if da L=2  , portanto ele vai para L=4 e chama a função novamente.
+Na  L=4 muda(d=3-1,fromt=a, auxt=b,tot=c)
+Em uma 3 instancia na L=1   d=2 , fromt=a, tot=b e auxt=c 
+Novamente o valor de d não atende ao if da L=2
+E na L= 4 ele chama a função novamente muda(d=2-1,fromt=a,auxt=c,tot=b)
+Em uma 4 instancia na L=1  d=1,fromt=a,tot=c,auxt=b.
+O valor de d=1 atende ao if da L=2 que funciona como critério de parada , e ele imprimira o printf da L=2.5.
+Depois disso, ele volta para instancia anterior(para 3 instancia) onde  d=2 , fromt=a, tot=b e auxt=c que estava na L=4, ela continua e imprime o printf da L=5
+E na L=6  ele chama a funcao novamente muda(d=2-1,auxt=c,tot=b,fromt=a)
+Em uma 5 instancia que foi chamada pela 2  na L=1, d=1 , fromt=c,tot=b,auxt=a , o valor de d vai atender ao if da L= 2 e portanto ele vai imprimir o printf da L=2.5.
+Daí ele volta pra instancia 3 que se conclui, ai ele vai retornar para instancia que a chamou que no caso foi a 2 instancia que estava na L=4  d=3  ,fromt=a, tot=c,auxt=b , ele imprimira o printf da da L= 5  
+E na L= 6 da 2 instancia ele chama a função muda(d=3-1,auxt=b,tot=c,fromt=a)  
+E na L=1 de uma 6 instancia que esta vinculada a 1 instancia  d=2 ,fromt=a, tot=c, auxt=b . 
+Ele não vai atender ao if da L=2, ai ele ira pra linha 4 da 6 instancia muda(d=2-1,fromt=a,auxt=b,tot=c)
+Ai ele abre uma 7 instancia na L=1 com d=1,fromt =a,tot=b,auxt=c
+Ele vai atender ao if da linha 2 e ira imprimir o printf da L=2.5
+Ai ele retorna para 6 instancia  onde d=2 ,fromt=a, tot=c, auxt=b , ai ele imprimira o printf da L=5
+Depois ele ira pra L=6 dessa mesma instancia  e chamara pela ultima vez muda(d=2-1,auxt=b, tot=c,fromt=a).
+Em uma 8 instancia que foi chamada pela  6 d=1 fromt=b, tot=c,auxt=a.
+O valor de d atende a condição do if da L=2  e imprime o printf da L=2.5, fechando essa instancia  ele retorna pra 6 que também será fechada, depois disso ele retorna PA instancia que chamou a 6 que foi a 2 que também se concluira ei er etornara pela ultima vez para função que chamou muda pela primeira vez no caso a main onde ele fechara a 1instancia e acabará o programa
