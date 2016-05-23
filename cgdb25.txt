@@ -1,0 +1,65 @@
+Reading symbols from ex25.x...done.
+(gdb) b main
+Breakpoint 1 at 0x40054a: file ex25.c, line 14.
+(gdb) run
+Starting program: /home/rspds/informatica/rascunhos/ex25.x
+
+Breakpoint 1, main () at ex25.c:14
+(gdb) n
+Discos = 3(fixo)
+(gdb) s
+recur (num=3, a=65 'A', b=66 'B', c=67 'C') at ex25.c:21
+(gdb) n
+(gdb) s
+recur (num=2, a=65 'A', b=67 'C', c=66 'B') at ex25.c:21
+(gdb) n
+(gdb) s
+recur (num=1, a=65 'A', b=66 'B', c=67 'C') at ex25.c:21
+(gdb) n
+(gdb) n
+Mova o disco 1 de A para B
+(gdb) n
+(gdb) n
+recur (num=2, a=65 'A', b=67 'C', c=66 'B') at ex25.c:27
+(gdb) n
+Mova o disco 2 de A para C
+(gdb) s
+recur (num=1, a=66 'B', b=67 'C', c=65 'A') at ex25.c:21
+(gdb) n
+(gdb) n
+Mova o disco 1 de B para C
+(gdb) n
+(gdb) n
+recur (num=3, a=65 'A', b=66 'B', c=67 'C') at ex25.c:27
+(gdb) n
+Mova o disco 3 de A para B
+(gdb) s
+recur (num=2, a=67 'C', b=66 'B', c=65 'A') at ex25.c:21
+(gdb) n
+(gdb) s
+recur (num=1, a=67 'C', b=65 'A', c=66 'B') at ex25.c:21
+(gdb) n
+(gdb) n
+Mova o disco 1 de C para A
+(gdb) n
+(gdb) n
+recur (num=2, a=67 'C', b=66 'B', c=65 'A') at ex25.c:27
+(gdb) n
+Mova o disco 2 de C para B
+(gdb) s
+recur (num=1, a=65 'A', b=66 'B', c=67 'C') at ex25.c:21
+(gdb) n
+(gdb) n
+Mova o disco 1 de A para B
+(gdb) n
+(gdb) n
+Mova o disco 1 de A para B
+(gdb) n
+(gdb) n
+main () at ex25.c:17
+(gdb) n
+(gdb) n
+__libc_start_main (main=0x400546 <main>, argc=1, argv=0x7fffffffe4f8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffe4e8) at libc-start.c:321
+321     libc-start.c: No such file or directory.
+(gdb) n
+[Inferior 1 (process 6414) exited normally]
