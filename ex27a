@@ -1,0 +1,21 @@
+/*programa que calcula o somatorio do quadrado
+ * Autor: Victor Cajuba
+ * Data: 16/05/2016*/
+
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+int main (void)
+{
+    float soma=0,y;
+    int i;
+
+    printf("\ndigite ate quanto quer fazer o somatorio ao quadrado..:");
+    scanf("%f",&y);
+    for(i=0;i<=y;i++)
+        soma=pow((double)i, 2.0)+soma;
+    printf("soma e %f   \n",soma);
+    return EXIT_SUCCESS;
+}
+
