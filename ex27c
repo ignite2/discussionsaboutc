@@ -1,0 +1,26 @@
+/*:*/
+/*programa que calcula o somatorio do quadrado
+ * Autor: Victor Cajuba
+ * Data: 16/05/2016*/
+
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#define MAX 1000
+int main (void)
+{
+    float soma=0,y;
+    int i;
+
+    /*printf("\ndigite qual o resultado da soma..:");
+    scanf("%f",&y);*/
+    for(i=0;soma<=MAX;i++)
+    {
+        soma=pow((double)i, 2.0)+soma;
+        printf("soma %f \n ate o termo %d \n",soma,i+1);
+       /* if(soma==1000)
+            break;*/
+    }
+    printf("o termo e' o: %d \n",i-1);
+    return EXIT_SUCCESS;
+}
