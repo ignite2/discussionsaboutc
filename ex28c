@@ -1,0 +1,22 @@
+/*programa que calcula a formula (-1)^n * n^2+ln(n)
+ * Autor: Victor Cajuba
+ * Data: 16/05/2016*/
+
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main (void)
+{
+    float soma=0,max;
+    int i;
+
+    printf("\n Digite o valor maximo do somatorio..: ");
+    scanf("%f",&max);
+    for(i=1;soma<=max;i++)
+    {
+        soma=(pow((double)(-1),i)*pow((double)i,2)+log(i))+soma;
+        printf("soma %f  ate o termo %d \n",soma,i+1);
+    }
+    printf("o termo e' o: %d \n",i-1);
+    return EXIT_SUCCESS;
+}
