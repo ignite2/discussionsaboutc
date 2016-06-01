@@ -1,0 +1,20 @@
+/*programa que calcula o somatorio do quadrado
+ * Autor: Victor Cajuba
+ * Data: 16/05/2016*/
+
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+int main (void)
+{
+    float y;
+    int i;
+
+    printf("\ndigite qual termo voce quer ver ao quadrado..:");
+    scanf("%d",&i);
+        y=pow((double)(i-1), 2.0);
+    printf("o resultado do termo e %0.f \n",y);
+    return EXIT_SUCCESS;
+}
+
