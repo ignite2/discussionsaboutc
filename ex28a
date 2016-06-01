@@ -1,0 +1,22 @@
+/*programa que calcula a formula (-1)^n * n^2+ln(n)
+ * Autor: Victor Cajuba
+ * Data: 16/05/2016*/
+
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+int main (void)
+{
+    float soma=0,y;
+
+    int i;
+
+    printf("\ndigite ate quanto quer fazer o somatorio ao quadrado..:");
+    scanf("%f",&y);
+     for(i=1;i<=y;i++)
+        soma=(pow((double)(-1),i)*pow((double)i,2)+log(i))+soma;
+    printf("a soma e' %f  \n",soma);
+    return EXIT_SUCCESS;
+}
+
